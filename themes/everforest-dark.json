@@ -39,6 +39,7 @@
         "icon.accent": null,
         "status_bar.background": "#21272b",
         "title_bar.background": "#21272b",
+        "title_bar.inactive_background": "#21272b",
         "toolbar.background": "#272e33",
         "tab_bar.background": "#21272b",
         "tab.inactive_background": "#21272b",
@@ -212,7 +213,7 @@
           "emphasis.strong": {
             "color": "#a7c080",
             "font_style": null,
-            "font_weight": "bold"
+            "font_weight": 700
           },
           "link_text": {
             "color": "#7fbbb3",
@@ -221,7 +222,7 @@
           },
           "link_uri": {
             "color": "#83c092",
-            "font_style": "underline",
+            "font_style": "italic",
             "font_weight": null
           },
           "punctuation.list_marker": {
@@ -237,7 +238,7 @@
           "title": {
             "color": "#e67e80",
             "font_style": null,
-            "font_weight": "bold"
+            "font_weight": 700
           }
         }
       }

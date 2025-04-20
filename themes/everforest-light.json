@@ -216,7 +216,7 @@
           "emphasis.strong": {
             "color": "#8DA101",
             "font_style": null,
-            "font_weight": "bold"
+            "font_weight": 700
           },
           "link_text": {
             "color": "#3A94C5",
@@ -225,7 +225,7 @@
           },
           "link_uri": {
             "color": "#35A77C",
-            "font_style": "underline",
+            "font_style": "italic",
             "font_weight": null
           },
           "punctuation.list_marker": {
@@ -241,7 +241,7 @@
           "title": {
             "color": "#F85552",
             "font_style": null,
-            "font_weight": "bold"
+            "font_weight": 700
           }
         }
       }
