@@ -41,7 +41,7 @@
     "right_padding": 0.08
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "telemetry": {
     "diagnostics": false,
