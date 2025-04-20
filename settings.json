@@ -168,6 +168,7 @@
               "PD901", // Avoid using the generic variable name df for DataFrames
               "NPY002", // Replace legacy np.random.{method_name} call with np.random.Generator
               "TRY003", // Avoid specifying long messages outside the exception class
+              "TRY400", // Use logger.exception instead of logger.error
               "FLY002", // Consider {expression} instead of string join
               "PLE1142", // await should be used within an async function
               "EXE001", // Shebang is present but file is not executable
