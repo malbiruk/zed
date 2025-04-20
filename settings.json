@@ -18,11 +18,11 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2",
-    "dock": "left"
+    "dock": "right"
   },
   "restore_on_startup": "last_workspace",
   "project_panel": {
