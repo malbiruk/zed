@@ -14,7 +14,7 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": false
+    "enabled_in_assistant": true
   },
   "assistant": {
     "default_model": {
@@ -41,7 +41,7 @@
     "right_padding": 0.08
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "telemetry": {
     "diagnostics": false,
@@ -106,7 +106,11 @@
   "always_treat_brackets_as_autoclosed": true,
   "languages": {
     "Python": {
-      "language_servers": ["pylsp", "!pyright", "ruff"],
+      "language_servers": [
+        "pylsp", // language services
+        "pyright", // type checking
+        "ruff" // linting and formatting
+      ],
       "preferred_line_length": 100,
       "format_on_save": "on",
       "formatter": [
@@ -125,9 +129,21 @@
     }
   },
   "lsp": {
+    "pyright": {
+      "settings": {
+        "disableLanguageServices": true,
+        "python.analysis": {
+          "diagnosticMode": "openFilesOnly",
+          "typeCheckingMode": "basic",
+          "diagnosticSeverityOverrides": {
+            "reportUnusedExpression": false
+          }
+        }
+      }
+    },
     "pylsp": {
       "binary": {
-        "path": "/home/klim/.local/bin/pylsp"
+        "path": "/opt/homebrew/bin/pylsp"
       },
       "settings": {
         "plugins": {
@@ -140,6 +156,7 @@
     "ruff": {
       "initialization_options": {
         "settings": {
+          "exclude": ["**/tests/**"],
           "path": "./pyproject.toml",
           "lineLength": 100,
           "targetVersion": "py312",
@@ -154,6 +171,7 @@
               // "TD", // todo comments detection
               // "T20", // flake8-print rules (print statements)
               // "S", // flake8-bandit security rules
+              // "S101", // Use of assert detected
               // "ANN", // flake8-annotations type annotation rules
               "D", // pydocstyle docstring rules
               "E501", // line too long
@@ -177,6 +195,9 @@
               "NPY201", // np.{existing} will be removed in NumPy 2.0. {migration_guide}
               "BLE001" // Do not catch blind exception: `Exception`
             ],
+            "per-file-ignores": {
+              "**tests/**": ["S101"]
+            },
             "severities": {
               "PLE": "E", // pylint error rules
               "I002": "E", // Missing required import for __all__ item
