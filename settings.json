@@ -106,11 +106,7 @@
   "always_treat_brackets_as_autoclosed": true,
   "languages": {
     "Python": {
-      "language_servers": [
-        "pylsp", // language services
-        "pyright", // checking imports
-        "ruff" // linting and formatting
-      ],
+      "language_servers": ["pyright", "ruff"],
       "preferred_line_length": 100,
       "format_on_save": "on",
       "formatter": [
@@ -131,7 +127,6 @@
   "lsp": {
     "pyright": {
       "settings": {
-        "disableLanguageServices": true,
         "python.analysis": {
           "diagnosticMode": "openFilesOnly",
           "typeCheckingMode": "off",
@@ -140,18 +135,6 @@
             "reportCallIssue": "none",
             "reportAttributeAccessIssue": "warning",
             "reportInvalidTypeForm": "none"
-          }
-        }
-      }
-    },
-    "pylsp": {
-      "binary": {
-        "path": "/home/klim/.local/bin/pylsp"
-      },
-      "settings": {
-        "plugins": {
-          "ruff": {
-            "enabled": false // use ruff extension instead
           }
         }
       }
