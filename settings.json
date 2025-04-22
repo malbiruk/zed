@@ -9,7 +9,7 @@
 
 {
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
@@ -41,7 +41,7 @@
     "right_padding": 0.08
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "telemetry": {
     "diagnostics": false,
