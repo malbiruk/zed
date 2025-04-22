@@ -108,7 +108,7 @@
     "Python": {
       "language_servers": [
         "pylsp", // language services
-        "pyright", // type checking
+        "pyright", // checking imports
         "ruff" // linting and formatting
       ],
       "preferred_line_length": 100,
@@ -131,14 +131,15 @@
   "lsp": {
     "pyright": {
       "settings": {
-        "exclude": ["**/tests/**"],
         "disableLanguageServices": true,
         "python.analysis": {
           "diagnosticMode": "openFilesOnly",
-          "typeCheckingMode": "basic",
+          "typeCheckingMode": "off",
           "diagnosticSeverityOverrides": {
             "reportUnusedExpression": false,
-            "reportCallIssue": "information"
+            "reportCallIssue": "none",
+            "reportAttributeAccessIssue": "warning",
+            "reportInvalidTypeForm": "none"
           }
         }
       }
@@ -174,7 +175,7 @@
               // "T20", // flake8-print rules (print statements)
               // "S", // flake8-bandit security rules
               // "S101", // Use of assert detected
-              // "ANN", // flake8-annotations type annotation rules
+              "ANN", // flake8-annotations type annotation rules
               "D", // pydocstyle docstring rules
               "E501", // line too long
               // "INP", // flake8-no-pep420 rules (implicit namespace packages)
