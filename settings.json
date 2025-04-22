@@ -131,12 +131,14 @@
   "lsp": {
     "pyright": {
       "settings": {
+        "exclude": ["**/tests/**"],
         "disableLanguageServices": true,
         "python.analysis": {
           "diagnosticMode": "openFilesOnly",
           "typeCheckingMode": "basic",
           "diagnosticSeverityOverrides": {
-            "reportUnusedExpression": false
+            "reportUnusedExpression": false,
+            "reportCallIssue": "information"
           }
         }
       }
@@ -148,7 +150,7 @@
       "settings": {
         "plugins": {
           "ruff": {
-            "enabled": false
+            "enabled": false // use ruff extension instead
           }
         }
       }
