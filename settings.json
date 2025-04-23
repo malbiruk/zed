@@ -134,7 +134,7 @@
           "disableLanguageServices": false
         },
         "python.analysis": {
-          "diagnosticMode": "workspace",
+          "diagnosticMode": "openFilesOnly",
           "typeCheckingMode": "off",
           "diagnosticSeverityOverrides": {
             "reportUnusedExpression": "none",
