@@ -107,9 +107,9 @@
   "languages": {
     "Python": {
       "language_servers": [
-        "pyright", // import checks
-        "ruff", // linting and formatting
-        "pylsp" // language server
+        "pyright", // language server, import checks
+        "ruff" // linting and formatting
+        // "pylsp" // language server
       ],
       "preferred_line_length": 100,
       "format_on_save": "on",
@@ -129,19 +129,19 @@
     }
   },
   "lsp": {
-    "pylsp": {
-      "settings": {
-        "plugins": {
-          "ruff": {
-            "enabled": false
-          }
-        }
-      }
-    },
+    // "pylsp": {
+    //   "settings": {
+    //     "plugins": {
+    //       "ruff": {
+    //         "enabled": false
+    //       }
+    //     }
+    //   }
+    // },
     "pyright": {
       "settings": {
         "pyright": {
-          "disableLanguageServices": true
+          "disableLanguageServices": false
         },
         "python.analysis": {
           "diagnosticMode": "workspace",
