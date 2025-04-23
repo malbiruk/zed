@@ -140,7 +140,7 @@
             "reportUnusedExpression": "none",
             "reportCallIssue": "none",
             "reportAttributeAccessIssue": "information",
-            "reportMissingImports": "information",
+            "reportMissingImports": "warning",
             "reportInvalidTypeForm": "none"
           }
         }
