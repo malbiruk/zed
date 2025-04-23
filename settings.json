@@ -106,7 +106,11 @@
   "always_treat_brackets_as_autoclosed": true,
   "languages": {
     "Python": {
-      "language_servers": ["pyright", "ruff"],
+      "language_servers": [
+        "pyright", // import checks
+        "ruff", // linting and formatting
+        "pylsp" // language server
+      ],
       "preferred_line_length": 100,
       "format_on_save": "on",
       "formatter": [
@@ -125,9 +129,20 @@
     }
   },
   "lsp": {
+    "pylsp": {
+      "settings": {
+        "plugins": {
+          "ruff": {
+            "enabled": false
+          }
+        }
+      }
+    },
     "pyright": {
       "settings": {
-        "disableLanguageServices": true,
+        "pyright": {
+          "disableLanguageServices": true
+        },
         "python.analysis": {
           "diagnosticMode": "workspace",
           "typeCheckingMode": "off",
@@ -143,7 +158,7 @@
     "ruff": {
       "initialization_options": {
         "settings": {
-          "exclude": ["**/tests/**"],
+          // "exclude": ["**/tests/**"],
           "path": "./pyproject.toml",
           "lineLength": 100,
           "targetVersion": "py312",
