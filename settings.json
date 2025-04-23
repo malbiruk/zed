@@ -9,7 +9,7 @@
 
 {
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
@@ -28,9 +28,9 @@
   "project_panel": {
     "auto_fold_dirs": true
   },
-  // "collaboration_panel": {
-  //   "button": false
-  // },
+  "collaboration_panel": {
+    "button": false
+  },
   "tabs": {
     "git_status": true,
     "file_icons": true
@@ -41,7 +41,7 @@
     "right_padding": 0.08
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "telemetry": {
     "diagnostics": false,
@@ -106,11 +106,7 @@
   "always_treat_brackets_as_autoclosed": true,
   "languages": {
     "Python": {
-      "language_servers": [
-        "pylsp", // language services
-        "pyright", // checking imports
-        "ruff" // linting and formatting
-      ],
+      "language_servers": ["pyright", "ruff"],
       "preferred_line_length": 100,
       "format_on_save": "on",
       "formatter": [
@@ -133,25 +129,13 @@
       "settings": {
         "disableLanguageServices": true,
         "python.analysis": {
-          "diagnosticMode": "openFilesOnly",
+          "diagnosticMode": "workspace",
           "typeCheckingMode": "off",
           "diagnosticSeverityOverrides": {
             "reportUnusedExpression": false,
             "reportCallIssue": "none",
             "reportAttributeAccessIssue": "warning",
             "reportInvalidTypeForm": "none"
-          }
-        }
-      }
-    },
-    "pylsp": {
-      "binary": {
-        "path": "/opt/homebrew/bin/pylsp"
-      },
-      "settings": {
-        "plugins": {
-          "ruff": {
-            "enabled": false // use ruff extension instead
           }
         }
       }
