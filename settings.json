@@ -149,7 +149,7 @@
           "diagnosticSeverityOverrides": {
             "reportUnusedExpression": false,
             "reportCallIssue": "none",
-            "reportAttributeAccessIssue": "information",
+            "reportAttributeAccessIssue": "warning",
             "reportInvalidTypeForm": "none"
           }
         }
