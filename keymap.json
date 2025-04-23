@@ -9,21 +9,24 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-shift-y": "workspace::CloseAllDocks",
-      "ctrl-k j": "workspace::ToggleBottomDock",
-      "ctrl-k b": "workspace::ToggleRightDock",
-      "ctrl-alt-v": "workspace::ToggleVimMode"
+      "cmd-shift-y": "workspace::CloseAllDocks",
+      "cmd-k j": "workspace::ToggleBottomDock",
+      "cmd-k b": "workspace::ToggleRightDock",
+      "cmd-alt-v": "workspace::ToggleVimMode",
+      "ctrl-escape": "terminal_panel::ToggleFocus"
       // "shift shift": "file_finder::Toggle"
     }
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-alt-shift-e": "editor::ToggleEditPrediction",
-      "ctrl-shift-backspace": "repl::ClearOutputs",
-      "ctrl-alt-=": "pane::GoForward",
-      "ctrl-i": "assistant::InsertIntoEditor"
       // "j k": ["workspace::SendKeystrokes", "escape"]
+      "ctrl-.": ["editor::ToggleComments", { "advance_downwards": false }],
+      "cmd-shift-backspace": "repl::ClearOutputs",
+      "cmd-i": "assistant::InsertIntoEditor",
+      "ctrl-shift-down": "editor::SelectToEndOfParagraph",
+      "ctrl-shift-up": "editor::SelectToStartOfParagraph",
+      "ctrl-?": "editor::SelectToStartOfParagraph"
     }
   }
 ]
