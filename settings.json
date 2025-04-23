@@ -158,7 +158,7 @@
     "ruff": {
       "initialization_options": {
         "settings": {
-          // "exclude": ["**/tests/**"],
+          "exclude": ["**/tests/**"],
           "path": "./pyproject.toml",
           "lineLength": 100,
           "targetVersion": "py312",
@@ -197,9 +197,6 @@
               "NPY201", // np.{existing} will be removed in NumPy 2.0. {migration_guide}
               "BLE001" // Do not catch blind exception: `Exception`
             ],
-            "per-file-ignores": {
-              "**tests/**": ["S101"]
-            },
             "severities": {
               "PLE": "E", // pylint error rules
               "I002": "E", // Missing required import for __all__ item
