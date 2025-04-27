@@ -141,7 +141,8 @@
             "reportCallIssue": "none",
             "reportAttributeAccessIssue": "information",
             "reportMissingImports": "warning",
-            "reportInvalidTypeForm": "none"
+            "reportInvalidTypeForm": "none",
+            "reportUndefinedVariable": "none"
           }
         }
       }
@@ -166,7 +167,7 @@
             // "T20", // flake8-print rules (print statements)
             // "S", // flake8-bandit security rules
             // "S101", // Use of assert detected
-            "ANN", // flake8-annotations type annotation rules
+            // "ANN", // flake8-annotations type annotation rules
             "D", // pydocstyle docstring rules
             "E501", // line too long
             // "INP", // flake8-no-pep420 rules (implicit namespace packages)

@@ -25,5 +25,11 @@
       "ctrl-i": "assistant::InsertIntoEditor"
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "ctrl-enter": "assistant::Assist"
+    }
   }
 ]
